@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz de Modos e Tempos Verbais</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Tela inicial -->
+        <div id="start-screen" class="screen active">
+            <div class="header">
+                <h1>Quiz de Modos e Tempos Verbais</h1>
+                <p>Teste seus conhecimentos sobre os modos indicativo, subjuntivo e imperativo!</p>
+            </div>
+            <div class="info">
+                <p><strong>📚 Para alunos do 6º ao 8º ano</strong></p>
+                <p><strong>❓ 25 questões</strong></p>
+                <p><strong>⏱️ Sem limite de tempo</strong></p>
+                <p><strong>🎯 Explicações detalhadas para cada erro</strong></p>
+            </div>
+            <button id="start-btn" class="btn-primary">Começar Quiz</button>
+        </div>
+
+        <!-- Tela do quiz -->
+        <div id="quiz-screen" class="screen">
+            <div class="progress-bar">
+                <div id="progress" class="progress-fill"></div>
+            </div>
+            
+            <div class="question-info">
+                <span id="question-number">Questão 1 de 25</span>
+            </div>
+
+            <div class="question-container">
+                <h2 id="question-text">Carregando questão...</h2>
+            </div>
+
+            <div class="options-container">
+                <button class="option-btn" data-option="0">
+                    <span class="option-letter">A</span>
+                    <span class="option-text">Opção A</span>
+                </button>
+                <button class="option-btn" data-option="1">
+                    <span class="option-letter">B</span>
+                    <span class="option-text">Opção B</span>
+                </button>
+                <button class="option-btn" data-option="2">
+                    <span class="option-letter">C</span>
+                    <span class="option-text">Opção C</span>
+                </button>
+                <button class="option-btn" data-option="3">
+                    <span class="option-letter">D</span>
+                    <span class="option-text">Opção D</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Modal de feedback -->
+        <div id="feedback-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 id="feedback-title">Feedback</h3>
+                </div>
+                <div class="modal-body">
+                    <p id="feedback-text">Texto do feedback</p>
+                </div>
+                <div class="modal-footer">
+                    <button id="try-again-btn" class="btn-secondary">Tentar Novamente</button>
+                    <button id="next-question-btn" class="btn-primary">Próxima Questão</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tela de resultados -->
+        <div id="results-screen" class="screen">
+            <div class="results-container">
+                <h1>Parabéns! 🎉</h1>
+                <div class="score-display">
+                    <div class="score-circle">
+                        <span id="final-score">0</span>
+                        <span class="score-total">/25</span>
+                    </div>
+                </div>
+                <div class="performance-message">
+                    <p id="performance-text">Excelente trabalho!</p>
+                </div>
+                <div class="results-actions">
+                    <button id="restart-btn" class="btn-primary">Refazer Quiz</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
